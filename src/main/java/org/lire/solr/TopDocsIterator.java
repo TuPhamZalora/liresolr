@@ -1,4 +1,4 @@
-package net.semanticmetadata.lire.solr;
+package org.lire.solr;
 
 import org.apache.htrace.fasterxml.jackson.databind.util.ArrayIterator;
 import org.apache.lucene.search.ScoreDoc;

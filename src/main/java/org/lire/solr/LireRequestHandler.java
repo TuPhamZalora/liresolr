@@ -37,7 +37,7 @@
  *     http://www.semanticmetadata.net/lire, http://www.lire-project.net
  */
 
-package net.semanticmetadata.lire.solr;
+package org.lire.solr;
 
 import net.semanticmetadata.lire.imageanalysis.features.GlobalFeature;
 import net.semanticmetadata.lire.imageanalysis.features.global.ColorLayout;

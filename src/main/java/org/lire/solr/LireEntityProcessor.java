@@ -1,10 +1,10 @@
-package net.semanticmetadata.lire.solr;
+package org.lire.solr;
 
 import net.semanticmetadata.lire.imageanalysis.features.GlobalFeature;
 import net.semanticmetadata.lire.imageanalysis.features.LireFeature;
 import net.semanticmetadata.lire.imageanalysis.features.global.*;
 import net.semanticmetadata.lire.indexers.hashing.BitSampling;
-import net.semanticmetadata.lire.solr.indexing.ParallelSolrIndexer;
+import org.lire.solr.index.ParallelSolrIndexer;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.solr.handler.dataimport.Context;
 import org.apache.solr.handler.dataimport.DataSource;

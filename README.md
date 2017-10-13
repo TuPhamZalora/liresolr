@@ -138,7 +138,7 @@ Installation
 
 We assume you have a Solr server installed and running and you have already added a core. If not, check [src/main/docs/install.md](src/main/docs/install.md) or don't even try but go for the docker image. First run the dist task by `gradlew distForSolr` command in folder where the `build.gradle` file is found to create a plugin jar. Then copy jars: `cp ./dist/*.jar /opt/solr/server/solr-webapp/webapp/WEB-INF/lib/`. Then add the new `RequestHandler` and the `ValueSourceParser` have to be registered in the `solrconfig.xml` file:
 
-    <requestHandler name="/lireq" class="net.semanticmetadata.lire.solr.LireRequestHandler">
+    <requestHandler name="/lireq" class="org.lire.solr.LireRequestHandler">
         <lst name="defaults">
             <str name="echoParams">explicit</str>
             <str name="wt">json</str>
@@ -147,7 +147,7 @@ We assume you have a Solr server installed and running and you have already adde
     </requestHandler>
      
     <valueSourceParser name="lirefunc" 
-        class="net.semanticmetadata.lire.solr.LireValueSourceParser" />
+        class="org.lire.solr.LireValueSourceParser" />
 
 Use of the request handler is detailed above.
 
@@ -166,7 +166,7 @@ You'll also need the respective fields in the `managed-schema` file:
 
 Do not forget to add the custom field at the very same file:
 
-    <fieldtype name="binaryDV" class="net.semanticmetadata.lire.solr.BinaryDocValuesField"/>
+    <fieldtype name="binaryDV" class="org.lire.solr.BinaryDocValuesField"/>
 
 
 Indexing
@@ -191,7 +191,7 @@ file per image. Specifying an outfile will collect the information of all images
 - *-a* ... use both BitSampling and MetricSpaces.
 - *-l* ... disables BitSampling and uses MetricSpaces instead.
 - *-m* ... maximum side length of images when indexed. All bigger files are scaled down. default is 512.
-- *-r* ... defines a class implementing net.semanticmetadata.lire.solr.indexing.ImageDataProcessor
+- *-r* ... defines a class implementing org.lire.solr.index.ImageDataProcessor
        that provides additional fields.
 - *-y* ... defines which feature classes are to be extracted. default is "-y ph,cl,eh,jc". "-y ce,ac" would
        add to the other four features.
@@ -248,7 +248,7 @@ Another way is to use the LireEntityProcessor. Then you have to reference the *s
                     fileName=".*jpg"
                     recursive="true"
                     rootEntity="false" dataSource="null" onError="skip">
-                <entity name="lire-test" processor="net.semanticmetadata.lire.solr.LireEntityProcessor" url="${f.fileAbsolutePath}" dataSource="bin"  onError="skip">
+                <entity name="lire-test" processor="org.lire.solr.LireEntityProcessor" url="${f.fileAbsolutePath}" dataSource="bin"  onError="skip">
                     <field column="id"/>
                     <field column="cl_ha"/>
                     <field column="cl_hi"/>

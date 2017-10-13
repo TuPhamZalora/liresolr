@@ -37,18 +37,16 @@
  *     http://www.semanticmetadata.net/lire, http://www.lire-project.net
  */
 
-package net.semanticmetadata.lire.solr;
+package org.lire.solr;
 
 import net.semanticmetadata.lire.imageanalysis.features.GlobalFeature;
 import net.semanticmetadata.lire.imageanalysis.features.global.ColorLayout;
-import net.semanticmetadata.lire.imageanalysis.features.global.EdgeHistogram;
 import org.apache.lucene.index.*;
 import org.apache.lucene.queries.function.FunctionValues;
 import org.apache.lucene.queries.function.ValueSource;
 import org.apache.lucene.queries.function.docvalues.DocTermsIndexDocValues;
 import org.apache.lucene.util.Bits;
 import org.apache.lucene.util.BytesRefBuilder;
-import org.apache.solr.common.util.Base64;
 
 import java.io.IOException;
 import java.util.Arrays;

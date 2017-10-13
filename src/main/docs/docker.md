@@ -39,7 +39,7 @@ $> docker start <id>
 You might index more Flickr photos by using the provided tool. Download both `lire.jar` and `liresolr.jar` from the [Github release page](https://github.com/dermotte/liresolr/releases) and run 
 
 ``
-$> java -cp lire.jar;liresolr.jar net.semanticmetadata.lire.solr.tools.FlickrSolrIndexingTool -o out.xml -n 50 
+$> java -cp lire.jar;liresolr.jar net.semanticmetadata.lire.solr.tools.flickr.FlickrSolrIndexingTool -o out.xml -n 50 
 ``
 
 The resulting file `out.xml` contains 50 more images to send to the server and extends your set of indexed images.

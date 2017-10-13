@@ -1,4 +1,4 @@
-package net.semanticmetadata.lire.solr.indexing;
+package org.lire.solr.index;
 
 /**
  * This file is part of LIRE-Solr, a Java library for content based image retrieval.

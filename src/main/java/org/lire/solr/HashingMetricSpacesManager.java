@@ -1,4 +1,4 @@
-package net.semanticmetadata.lire.solr;
+package org.lire.solr;
 
 import net.semanticmetadata.lire.indexers.hashing.BitSampling;
 import net.semanticmetadata.lire.indexers.hashing.MetricSpaces;

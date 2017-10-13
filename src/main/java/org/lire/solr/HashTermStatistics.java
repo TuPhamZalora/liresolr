@@ -1,4 +1,4 @@
-package net.semanticmetadata.lire.solr;
+package org.lire.solr;
 
 import org.apache.lucene.index.Terms;
 import org.apache.lucene.index.TermsEnum;

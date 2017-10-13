@@ -37,7 +37,7 @@
  *     http://www.semanticmetadata.net/lire, http://www.lire-project.net
  */
 
-package net.semanticmetadata.lire.solr;
+package org.lire.solr;
 
 import org.apache.lucene.document.Field;
 import org.apache.lucene.index.IndexableField;

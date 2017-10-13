@@ -1,4 +1,4 @@
-package net.semanticmetadata.lire.solr;
+package org.lire.solr;
 
 import net.semanticmetadata.lire.searchers.SimpleResult;
 import org.apache.lucene.document.Document;

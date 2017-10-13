@@ -1,6 +1,7 @@
 package net.semanticmetadata.lire.solr.indexing;
 
 import junit.framework.TestCase;
+import org.lire.solr.index.LogoCaImageDataProcessor;
 
 /**
  * Created by mlux on 08.12.2016.

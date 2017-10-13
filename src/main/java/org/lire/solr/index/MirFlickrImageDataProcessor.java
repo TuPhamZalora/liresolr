@@ -1,4 +1,4 @@
-package net.semanticmetadata.lire.solr.indexing;
+package org.lire.solr.index;
 
 import net.semanticmetadata.lire.utils.FileUtils;
 

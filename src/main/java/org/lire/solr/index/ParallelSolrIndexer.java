@@ -37,7 +37,7 @@
  *     http://www.semanticmetadata.net/lire, http://www.lire-project.net
  */
 
-package net.semanticmetadata.lire.solr.indexing;
+package org.lire.solr.index;
 
 import net.semanticmetadata.lire.imageanalysis.features.GlobalFeature;
 import net.semanticmetadata.lire.imageanalysis.features.global.ColorLayout;
@@ -47,8 +47,8 @@ import net.semanticmetadata.lire.imageanalysis.features.global.PHOG;
 import net.semanticmetadata.lire.indexers.hashing.BitSampling;
 import net.semanticmetadata.lire.indexers.hashing.MetricSpaces;
 import net.semanticmetadata.lire.indexers.parallel.WorkItem;
-import net.semanticmetadata.lire.solr.FeatureRegistry;
-import net.semanticmetadata.lire.solr.HashingMetricSpacesManager;
+import org.lire.solr.FeatureRegistry;
+import org.lire.solr.HashingMetricSpacesManager;
 import net.semanticmetadata.lire.utils.ImageUtils;
 
 import javax.imageio.ImageIO;
@@ -77,7 +77,7 @@ import java.util.concurrent.LinkedBlockingQueue;
  * <li> -p ... enables image processing before indexing (despeckle, trim white space)</li>
  * <li> -a ... use both BitSampling and MetricSpaces.</li>
  * <li> -l ... disables BitSampling and uses MetricSpaces instead.</li>
- * <li> -r ... defines a class implementing net.semanticmetadata.lire.solr.indexing.ImageDataProcessor that provides additional fields.</li>
+ * <li> -r ... defines a class implementing org.lire.solr.index.ImageDataProcessor that provides additional fields.</li>
  * </ul>
  * <p>
  * TODO: Make feature list change-able
@@ -233,7 +233,7 @@ public class ParallelSolrIndexer implements Runnable {
                 "-a ... use both BitSampling and MetricSpaces.\n" +
                 "-l ... disables BitSampling and uses MetricSpaces instead.\n" +
                 "-m ... maximum side length of images when indexed. All bigger files are scaled down. default is 512.\n" +
-                "-r ... defines a class implementing net.semanticmetadata.lire.solr.indexing.ImageDataProcessor\n" +
+                "-r ... defines a class implementing org.lire.solr.index.ImageDataProcessor\n" +
                 "       that provides additional fields.\n" +
                 "-y ... defines which feature classes are to be extracted. default is \"-y ph,cl,eh,jc\". \"-y ce,ac\" would \n" +
                 "       add to the other four features. ");

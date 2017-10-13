@@ -37,7 +37,7 @@
  *     http://www.semanticmetadata.net/lire, http://www.lire-project.net
  */
 
-package net.semanticmetadata.lire.solr;
+package org.lire.solr;
 
 import org.apache.commons.codec.binary.Base64;
 import org.apache.lucene.queries.function.ValueSource;
@@ -52,7 +52,7 @@ import org.apache.solr.search.ValueSourceParser;
  * comments on the mailing list provided from Chris Hostetter, and the 4.4 Solr and Lucene source. </p>
  *
  * <p>Do not forget to add the function parser to the lsolrconfig.xml file like this:<br>
- * &lt;valueSourceParser name="lirefunc" class="net.semanticmetadata.lire.solr.LireValueSourceParser" /&gt;</p>
+ * &lt;valueSourceParser name="lirefunc" class="org.lire.solr.LireValueSourceParser" /&gt;</p>
  *
  * To use the function getting a distance to a reference image use it like:<br>
  * <pre>http://localhost:9000/solr/lire/select?q=*:*&amp;fl=id,lirefunc(cl,"FQY5DhMYDg0ODg0PEBEPDg4ODg8QEgsgEBAQEBAgEBAQEBA%3D")</pre>
